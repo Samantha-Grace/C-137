@@ -6,4 +6,4 @@ endpoint = 'character'
 
 r = requests.get(baseurl + endpoint)
 
-print(r)
+print(r.json())
