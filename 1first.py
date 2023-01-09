@@ -13,5 +13,5 @@ r = requests.get(baseurl + endpoint)
 data = r.json()
 
 # access the keys with square brackets
-print(data['info'])
+print(data['info']['pages'])
 
