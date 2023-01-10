@@ -15,3 +15,6 @@ data = r.json()
 # save into variable 
 pages = data['info']['pages']
 
+# What parts of other info do we want - check the docs
+# After info, we have results, lets check out the first item in that list
+print(data['results'][0])
