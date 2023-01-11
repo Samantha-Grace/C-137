@@ -15,14 +15,18 @@ def get_pages(response):
     # or/shortcut
     # return response['info']['pages']
 
+# func to work through the character info on each request and make into a loop
+def parse_json(response):
+    for item in response['results']:
+        print(item['name'], len(item['episode']))
+    return
+
+
+
+
 # get totel number of characters and how many episodes they have been in
 data = main_request(baseurl, endpoint)
 print(get_pages(data))
-
-pages = data['info']['pages']
-
-name = data['results'][0]['name']
-
-episodes = data['results'][0]['episode']
+parse_json(data)
 
 
